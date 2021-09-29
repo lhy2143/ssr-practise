@@ -1,0 +1,54 @@
+{
+  "name": "v3",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "build": "vue-cli-service build",
+    "serve": "vue-cli-service serve",
+    "build:client": "vue-cli-service build --dest dist/client",
+    "build:server": "cross-env SSR=true vue-cli-service build --dest dist/server",
+    "build:both": "npm run build:client && npm run build:server"
+  },
+  "dependencies": {
+    "@vue/server-renderer": "^3.0.11",
+    "core-js": "^3.6.5",
+    "express": "^4.17.1",
+    "h_ui": "^1.14.0",
+    "vue": "^3.0.0",
+    "vue-router": "^4.0.6",
+    "webpack-manifest-plugin": "^3.1.1",
+    "webpack-node-externals": "^2.5.2",
+    "workbox-webpack-plugin": "^6.1.5"
+  },
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "~4.5.0",
+    "@vue/cli-plugin-eslint": "~4.5.0",
+    "@vue/cli-service": "~4.5.0",
+    "@vue/compiler-sfc": "^3.0.0",
+    "babel-eslint": "^10.1.0",
+    "cross-env": "^7.0.3",
+    "eslint": "^6.7.2",
+    "eslint-plugin-vue": "^7.0.0",
+    "lottie-web": "^5.7.8",
+    "webpack": "^4.46.0"
+  },
+  "eslintConfig": {
+    "root": true,
+    "env": {
+      "node": true
+    },
+    "extends": [
+      "plugin:vue/vue3-essential",
+      "eslint:recommended"
+    ],
+    "parserOptions": {
+      "parser": "babel-eslint"
+    },
+    "rules": {}
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}
